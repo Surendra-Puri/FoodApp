@@ -1,4 +1,4 @@
-name: Build Push Deploy to AKS
+name: CI/CD Pipeline - Python
 
 on:
   workflow_dispatch:
@@ -217,7 +217,7 @@ jobs:
         uses: azure/login@v2
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-          
+
       - name: Attach ACR to AKS
         run: |
           az aks update \
