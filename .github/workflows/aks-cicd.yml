@@ -3,10 +3,6 @@ name: Build Push Deploy to AKS
 on:
   workflow_dispatch:
 
-  push:
-    branches:
-      - main
-
 env:
   IMAGE_NAME: simple-cicd-app
   RESOURCE_GROUP: ${{ vars.AKS_RESOURCE_GROUP }}

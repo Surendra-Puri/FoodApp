@@ -2,7 +2,7 @@ module "aks" {
   source = "git::https://github.com/Surendra-Puri/Terraform-Modules.git//AKS?ref=main"
 
   name      = "aks-lab"
-  location  = "Central India"
-  parent_id = "/subscriptions/.../resourceGroups/rg-test"
+  location  = data.azurerm_resource_group.rg.location
+  parent_id = data.azurerm_resource_group.rg.id
   vm_size   = "Standard_B2s"
 }
