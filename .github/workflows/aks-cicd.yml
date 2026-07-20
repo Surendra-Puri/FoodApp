@@ -9,7 +9,7 @@ env:
   IMAGE_NAME: simple-cicd-app
   RESOURCE_GROUP: ${{ vars.AKS_RESOURCE_GROUP }}
   AKS_CLUSTER_NAME: ${{ vars.AKS_CLUSTER_NAME }}
-  ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+  ACR_LOGIN_SERVER: ${{ vars.ACR_LOGIN_SERVER }}
   IMAGE_TAG: ${{ github.sha }}
 
 concurrency:
@@ -47,11 +47,11 @@ jobs:
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
           ACR_NAME: ${{ secrets.ACR_NAME }}
-          ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+          ACR_LOGIN_SERVER: ${{ vars.ACR_LOGIN_SERVER }}
         run: |
           test -n "$AZURE_CREDENTIALS" || (echo "Missing AZURE_CREDENTIALS secret" && exit 1)
           test -n "$ACR_NAME" || (echo "Missing ACR_NAME secret" && exit 1)
-          test -n "$ACR_LOGIN_SERVER" || (echo "Missing ACR_LOGIN_SERVER secret" && exit 1)
+          test -n "$ACR_LOGIN_SERVER" || (echo "Missing ACR_LOGIN_SERVER vars" && exit 1)
 
       - name: Log in to Azure
         uses: azure/login@v2
@@ -86,12 +86,12 @@ jobs:
       - name: Check required configuration
         env:
           AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
-          ACR_LOGIN_SERVER: ${{ secrets.ACR_LOGIN_SERVER }}
+          ACR_LOGIN_SERVER: ${{ vars.ACR_LOGIN_SERVER }}
           AKS_RESOURCE_GROUP: ${{ vars.AKS_RESOURCE_GROUP }}
           AKS_CLUSTER_NAME: ${{ vars.AKS_CLUSTER_NAME }}
         run: |
           test -n "$AZURE_CREDENTIALS" || (echo "Missing AZURE_CREDENTIALS secret" && exit 1)
-          test -n "$ACR_LOGIN_SERVER" || (echo "Missing ACR_LOGIN_SERVER secret" && exit 1)
+          test -n "$ACR_LOGIN_SERVER" || (echo "Missing ACR_LOGIN_SERVER vars" && exit 1)
           test -n "$AKS_RESOURCE_GROUP" || (echo "Missing AKS_RESOURCE_GROUP repository variable" && exit 1)
           test -n "$AKS_CLUSTER_NAME" || (echo "Missing AKS_CLUSTER_NAME repository variable" && exit 1)
 
