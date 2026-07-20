@@ -1,5 +1,5 @@
 module "aks" {
-  source = "../modules/aks"
+  source = "git::https://github.com/Surendra-Puri/Terraform-Modules.git//AKS?ref=main"
 
   name      = "aks-lab"
   location  = "Central India"
