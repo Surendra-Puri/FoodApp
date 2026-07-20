@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: simple-cicd-app
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: simple-cicd-app
   ports:
