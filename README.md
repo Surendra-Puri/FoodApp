@@ -101,3 +101,14 @@ After deployment, get the public IP:
 ```bash
 kubectl get service simple-cicd-app
 ```
+
+modified jobs:
+
+Test → Ensure the application works.
+CodeQL → Detect code security issues early.
+Build → Create the image.
+Trivy → Scan the image before it reaches the registry.
+Push → Push only a scanned image to ACR.
+Terraform → Provision or update AKS.
+Deploy → Deploy the new image.
+Verify → Confirm the deployment succeeded.

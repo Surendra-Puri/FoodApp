@@ -6,3 +6,4 @@ __pycache__/
 venv/
 kubeconfig.yaml
 aks.acr.ps1
+creds.ps1
