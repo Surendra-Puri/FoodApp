@@ -6,4 +6,5 @@ module "aks" {
   parent_id = data.azurerm_resource_group.rg.id
   vm_size   = "Standard_B2s"
   node_count = 1
+  os_disk_size_gb = 20
 }
