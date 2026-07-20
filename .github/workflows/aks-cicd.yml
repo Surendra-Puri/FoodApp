@@ -189,8 +189,22 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
+      - name: Check if PAT secret exists
+        run: |
+          if [ -z "${{ secrets.GH_PAT }}" ]; then
+            echo "PAT is EMPTY"
+            exit 1
+          else
+            echo "PAT is PRESENT"
+          fi
+
+      - name: Verify Git config
+        run: git config --global --list
+
       - name: Terraform Init
         run: terraform init
+
+        
 
       - name: Terraform Validate
         run: terraform validate
