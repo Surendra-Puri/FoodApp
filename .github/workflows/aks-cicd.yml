@@ -197,6 +197,10 @@ jobs:
           else
             echo "PAT is PRESENT"
           fi
+      - name: Debug RG.tf
+        run: |
+              pwd
+              cat RG.tf
 
       - name: Verify Git config
         run: git config --global --list
