@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">Layer cake</title>
+  <desc id="desc">A cheerful layer cake with frosting and cherries.</desc>
+  <rect width="420" height="300" rx="24" fill="#eef7ff"/>
+  <rect x="104" y="160" width="212" height="72" rx="14" fill="#d96c8a"/>
+  <rect x="120" y="110" width="180" height="64" rx="14" fill="#f4a7b9"/>
+  <path d="M120 128c18 18 34 18 52 0 18 18 34 18 52 0 18 18 38 18 76 0v34H120v-34Z" fill="#fff7f0"/>
+  <path d="M104 180c20 18 38 18 58 0 20 18 38 18 58 0 20 18 40 18 96 0v34H104v-34Z" fill="#fff7f0"/>
+  <rect x="201" y="70" width="16" height="40" rx="7" fill="#5f75d6"/>
+  <path d="M209 48c18 20 10 33 0 33s-18-13 0-33Z" fill="#ffbd3d"/>
+  <circle cx="151" cy="106" r="10" fill="#ce2f3d"/>
+  <circle cx="210" cy="106" r="10" fill="#ce2f3d"/>
+  <circle cx="269" cy="106" r="10" fill="#ce2f3d"/>
+</svg>

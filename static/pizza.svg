@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" role="img" aria-labelledby="title desc">
+  <title id="title">Pizza slice</title>
+  <desc id="desc">A colorful pizza slice with cheese and toppings.</desc>
+  <rect width="420" height="300" rx="24" fill="#fff4df"/>
+  <path d="M92 58c90 12 166 49 238 120L143 250 92 58Z" fill="#f6c453"/>
+  <path d="M92 58c90 12 166 49 238 120" fill="none" stroke="#b56a28" stroke-width="28" stroke-linecap="round"/>
+  <path d="M132 97c62 13 112 38 160 83L154 229 132 97Z" fill="#ffd96a"/>
+  <circle cx="168" cy="128" r="18" fill="#c7362e"/>
+  <circle cx="232" cy="159" r="17" fill="#c7362e"/>
+  <circle cx="186" cy="199" r="15" fill="#c7362e"/>
+  <circle cx="258" cy="199" r="11" fill="#6f9f44"/>
+  <circle cx="151" cy="164" r="10" fill="#6f9f44"/>
+</svg>
