@@ -1,5 +1,5 @@
 data "azurerm_resource_group" "rg" {
   name     = "rg-github-actions-lab"
-  location = "Central India"
+  location = "data.azurerm_resource_group.rg.location"
   
 }
