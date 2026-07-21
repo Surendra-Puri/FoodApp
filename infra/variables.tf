@@ -13,3 +13,13 @@ variable "resource_group_name" {
 variable "vm_size" {
   type = string
 }
+
+variable "node_count" {
+  type    = number
+  default = 1
+}
+
+variable "os_disk_size_gb" {
+  type    = number
+  default = 35
+}

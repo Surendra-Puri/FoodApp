@@ -204,7 +204,7 @@ jobs:
       - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
 
-  deploy:
+  set_up_aks:
     name: Deploy to AKS
     runs-on: ubuntu-latest
     needs: Infra
@@ -249,7 +249,7 @@ jobs:
   verify:
     name: Verify Deployment
     runs-on: ubuntu-latest
-    needs: deploy
+    needs: set_up_aks
 
     steps:
       - name: Login to Azure
