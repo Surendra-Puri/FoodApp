@@ -1,4 +1,4 @@
-variable "name" {
+variable "aks_name" {
   type = string
 }
 
@@ -19,7 +19,7 @@ variable "node_count" {
   default = 1
 }
 
-variable "os_disk_size_gb" {
+variable "os_disk_size" {
   type    = number
   default = 35
 }
