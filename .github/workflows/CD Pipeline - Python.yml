@@ -106,6 +106,7 @@ jobs:
         with:
           name: docker-image
           path: image.tar
+          retention-days: 1
 
   trivy:
     name: Trivy Scan
